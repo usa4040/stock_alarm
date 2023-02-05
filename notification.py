@@ -5,16 +5,16 @@ from discordwebhook import Discord
 
 from stock_price import StockPrice
 
-b = input('銘柄コードを入れてください:')
-get = StockPrice.get_stockprice(b)
+alarm_code = input('銘柄コードを入れてください:')
+get = StockPrice.get_stockprice(alarm_code)
 print('現在の株価は'+str(get.price)+'円です。')
-a = float(input('通知する株価を入力してください:'))
-print(str(a)+'円でアラートを設定しました。')
+alarm_price = float(input('通知する株価を入力してください:'))
+print(str(alarm_price)+'円でアラートを設定しました。')
 #株価アラーム
 while True:
-    get = StockPrice.get_stockprice(b)
+    get = StockPrice.get_stockprice(alarm_code)
     #print(get.price)
-    if float(get.price) == a:
+    if float(get.price) == alarm_price:
         #urlはdiscordのwebhookURLを使う,discoじゃなくてもいいけど。。。
         discord = Discord(url="----")
         #通知メッセージの内容
