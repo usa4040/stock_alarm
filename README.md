@@ -9,6 +9,7 @@ time,discordwebhook,bs4,urllib,dataclass
 ②スクレイピングへの興味とpythonの学習を兼ねて。
 ## 仕様
 実行すると
+https://user-images.githubusercontent.com/110113134/217210524-2f77680d-d123-4f97-8a40-3284a4b73a54.png
 ## 追加予定機能
 高値と安値のアラーム
 
